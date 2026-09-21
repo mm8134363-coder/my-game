@@ -1,0 +1,7 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>لوحة تحكم صوتنا</title><link rel="stylesheet" href="admin.css"></head><body>
+<header><b>🛡️ لوحة تحكم صوتنا</b><span id="state">غير مسجل</span></header><main>
+<section id="login" class="card"><h2>دخول المدير</h2><input id="key" type="password" placeholder="مفتاح المدير"><button onclick="login()">دخول</button><p>المفتاح الافتراضي للتجربة: admin123</p></section>
+<section id="panel" hidden><div class="cards"><div class="card">👥 متصل الآن <b id="online">0</b></div><div class="card">🎙️ الغرف <b id="roomCount">0</b></div><div class="card">🚨 البلاغات <b id="reportCount">0</b></div></div>
+<div class="card"><h2>الغرف</h2><div id="rooms"></div><button onclick="createRoom()">➕ غرفة جديدة</button></div>
+<div class="card"><h2>المستخدمون</h2><div id="users"></div></div>
+<div class="card"><h2>البلاغات</h2><div id="reports"></div></div></section></main><script src="admin.js"></script></body></html>
