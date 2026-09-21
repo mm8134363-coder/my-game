@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>لوحة تحكم صوتنا</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+<aside>
+  <div class="logo">🎙️ <b>صوتنا</b></div>
+  <button class="nav active" data-page="dashboard">📊 الرئيسية</button>
+  <button class="nav" data-page="rooms">🎙️ الغرف</button>
+  <button class="nav" data-page="users">👥 المستخدمون</button>
+  <button class="nav" data-page="reports">🚨 البلاغات</button>
+  <button class="nav" data-page="settings">⚙️ الإعدادات</button>
+</aside>
+
+<main>
+<header>
+  <div><h1 id="title">لوحة التحكم</h1><small>إدارة تطبيق الدردشة الصوتية والغرف</small></div>
+  <div class="admin">🛡️ المدير</div>
+</header>
+
+<section id="dashboard" class="page active">
+  <div class="cards">
+    <div class="card"><span>👥</span><small>المستخدمون</small><b>1,248</b></div>
+    <div class="card"><span>🎙️</span><small>الغرف النشطة</small><b>36</b></div>
+    <div class="card"><span>🟢</span><small>متصل الآن</small><b>184</b></div>
+    <div class="card"><span>🚨</span><small>بلاغات مفتوحة</small><b>7</b></div>
+  </div>
+  <div class="panel">
+    <h2>النشاط الأخير</h2>
+    <div class="activity">🟢 تم إنشاء غرفة «سهرة الأصدقاء» <time>منذ دقيقتين</time></div>
+    <div class="activity">👤 انضم 12 مستخدمًا إلى «الألعاب» <time>منذ 8 دقائق</time></div>
+    <div class="activity">🚨 بلاغ جديد يحتاج للمراجعة <time>منذ 15 دقيقة</time></div>
+  </div>
+</section>
+
+<section id="rooms" class="page">
+  <div class="toolbar"><h2>إدارة الغرف</h2><button class="primary" onclick="newRoom()">➕ غرفة جديدة</button></div>
+  <div class="table" id="roomTable"></div>
+</section>
+
+<section id="users" class="page">
+  <div class="toolbar"><h2>المستخدمون</h2><input id="userSearch" placeholder="🔎 بحث عن مستخدم"></div>
+  <div class="table" id="userTable"></div>
+</section>
+
+<section id="reports" class="page">
+  <div class="toolbar"><h2>البلاغات</h2></div>
+  <div class="table" id="reportTable"></div>
+</section>
+
+<section id="settings" class="page">
+  <h2>إعدادات التطبيق</h2>
+  <div class="settings">
+    <label>اسم التطبيق<input value="صوتنا"></label>
+    <label>السماح بإنشاء غرف عامة<input type="checkbox" checked></label>
+    <label>تفعيل نظام البلاغات<input type="checkbox" checked></label>
+    <label>الحد الأقصى للمستخدمين في الغرفة<input type="number" value="20"></label>
+    <button class="primary" onclick="saveSettings()">💾 حفظ الإعدادات</button>
+  </div>
+</section>
+</main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
